@@ -136,7 +136,7 @@ if defined?(Curl)
         self.url = location
 
         curb_or_webmock do
-          send( "http_#{@webmock_method}_without_webmock" )
+          send( "http_#{@webmock_method.downcase}" )
         end
 
         self.url = first_url
